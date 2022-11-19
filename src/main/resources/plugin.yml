@@ -7,19 +7,19 @@ commands:
   gmc:
     description: Sets gamemode to creative
     usage: /<command>
-    permission: op
+    permission: betterhub.gmc
   gms:
     description: Sets gamemode to survival
     usage: /<command>
-    permission: op
+    permission: betterhub.gms
   gma:
     description: Sets gamemode to adventure
     usage: /<command>
-    permission: op
+    permission: betterhub.gma
   gmsp:
     description: Sets gamemode to spectator
     usage: /<command>
-    permission: op
+    permission: betterhub.gmsp
   bhcf:
     description: Reload the configuration.
     permission: bettherhub.cf.reload
