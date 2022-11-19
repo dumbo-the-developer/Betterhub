@@ -1,0 +1,46 @@
+name: BetterHub
+version: '3.2'
+main: me.adarsh.betterhub.Main
+authors: [ Adarsh ]
+api-version: 1.13
+commands:
+  gmc:
+    description: Sets gamemode to creative
+    usage: /<command>
+    permission: op
+  gms:
+    description: Sets gamemode to survival
+    usage: /<command>
+    permission: op
+  gma:
+    description: Sets gamemode to adventure
+    usage: /<command>
+    permission: op
+  gmsp:
+    description: Sets gamemode to spectator
+    usage: /<command>
+    permission: op
+  bhcf:
+    description: Reload the configuration.
+    permission: bettherhub.cf.reload
+    usage: "Usage: /bhcf reload"
+  chatfilter:
+    aliases: [ cf ]
+    description: chatfilter
+  clearchat:
+    description: clear chat
+  spawn:
+  setspawn:
+  sethub:
+  hub:
+  linkspawn:
+  delspawn:
+  worldspawn:
+  spawnonrespawn:
+  aliases:
+    gmc: gamemode c
+    gms: gamemode s
+    gma: gamemode a
+    gmsp: gamemode sp
+
+
