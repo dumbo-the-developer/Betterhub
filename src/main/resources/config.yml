@@ -1,3 +1,10 @@
+############################################################################################################
+#                                       BETTERHUB CONFIGURATION                                            #
+#                                                                                                          #
+#                       BY CAREFUL WHILE EDITING ANY OF SETTING OF THIS SECTION                            #
+#                                                                                                          #
+############################################################################################################
+
 # Better Hub config
 # Placeholders: of chat formatter
 # {message} - the chat message
