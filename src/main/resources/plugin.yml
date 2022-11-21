@@ -24,11 +24,6 @@ commands:
     description: Reload the configuration.
     permission: bettherhub.cf.reload
     usage: "Usage: /bhcf reload"
-  chatfilter:
-    aliases: [ cf ]
-    description: chatfilter
-  clearchat:
-    description: clear chat
   spawn:
   setspawn:
   sethub:
@@ -37,6 +32,7 @@ commands:
   delspawn:
   worldspawn:
   spawnonrespawn:
+  bow:
   aliases:
     gmc: gamemode c
     gms: gamemode s
