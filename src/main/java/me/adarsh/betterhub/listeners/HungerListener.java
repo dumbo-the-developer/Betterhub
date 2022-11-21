@@ -11,4 +11,5 @@ public class HungerListener implements Listener {
         if (e.getEntity() instanceof org.bukkit.entity.Player)
             e.setCancelled(true);
     }
+
 }
