@@ -4,9 +4,9 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public enum Permissions {
-  ADMIN("betterhub.admin"),
+  ADMIN("betterhub.spawn.admin"),
   BYPASS_DELAY("betterhub.bypass.delay"),
-  USE("betterhub.use");
+  USE("betterhub.spawn.use");
   
   private String permissionNode;
   
