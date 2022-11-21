@@ -30,6 +30,7 @@ commands:
   clearchat:
     description: clear chat
   spawn:
+  bow:
   setspawn:
   sethub:
   hub:

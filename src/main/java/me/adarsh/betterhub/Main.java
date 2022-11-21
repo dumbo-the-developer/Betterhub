@@ -5,19 +5,11 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
-import me.adarsh.betterhub.commands.DelSpawnCommand;
-import me.adarsh.betterhub.commands.HubCommand;
-import me.adarsh.betterhub.commands.LinkSpawnCommand;
-import me.adarsh.betterhub.commands.SetHubCommand;
-import me.adarsh.betterhub.commands.SetSpawnCommand;
-import me.adarsh.betterhub.commands.SpawnCommand;
-import me.adarsh.betterhub.commands.SpawnOnRespawnCommand;
-import me.adarsh.betterhub.commands.WorldSpawnCommand;
-import me.adarsh.betterhub.commands.gma;
-import me.adarsh.betterhub.commands.gmc;
-import me.adarsh.betterhub.commands.gms;
-import me.adarsh.betterhub.commands.gmsp;
+
+import me.adarsh.betterhub.commands.*;
 import me.adarsh.betterhub.config.WSConfig;
+import me.adarsh.betterhub.listeners.HungerListener;
+import me.adarsh.betterhub.listeners.TeleportBowListener;
 import me.adarsh.betterhub.services.SpawnDelayService;
 import me.adarsh.betterhub.services.WorldSpawnService;
 import me.clip.placeholderapi.PlaceholderAPI;
@@ -40,10 +32,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class Main extends JavaPlugin implements Listener {
 
   private static final Pattern HEX_PATTERN = Pattern.compile("&#([A-Fa-f0-9]{6})");
-
-  private LuckPerms luckPerms;
-
   private static Main gPlugin;
+  private LuckPerms luckPerms;
 
   public static Main getPlugin() {
     return gPlugin;
@@ -69,6 +59,9 @@ public class Main extends JavaPlugin implements Listener {
     Bukkit.getPluginCommand("delspawn").setExecutor((CommandExecutor) new DelSpawnCommand());
     Bukkit.getPluginCommand("worldspawn").setExecutor((CommandExecutor) new WorldSpawnCommand());
     Bukkit.getPluginCommand("spawnonrespawn").setExecutor((CommandExecutor) new SpawnOnRespawnCommand());
+    getCommand("bow").setExecutor((CommandExecutor)new GiveBowCommand());
+    getServer().getPluginManager().registerEvents((Listener)new TeleportBowListener(), (Plugin)this);
+    getServer().getPluginManager().registerEvents(new HungerListener(), this);
     Bukkit.getPluginManager().registerEvents((Listener) new SpawnDelayService(), (Plugin) this);
     Bukkit.getPluginManager().registerEvents((Listener) new WorldSpawnService(), (Plugin) this);
     WSConfig.reload(getPlugin());
