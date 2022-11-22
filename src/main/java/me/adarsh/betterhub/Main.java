@@ -59,8 +59,8 @@ public class Main extends JavaPlugin implements Listener {
     Bukkit.getPluginCommand("delspawn").setExecutor((CommandExecutor) new DelSpawnCommand());
     Bukkit.getPluginCommand("worldspawn").setExecutor((CommandExecutor) new WorldSpawnCommand());
     Bukkit.getPluginCommand("spawnonrespawn").setExecutor((CommandExecutor) new SpawnOnRespawnCommand());
-    getCommand("bow").setExecutor((CommandExecutor)new GiveBowCommand());
-    getServer().getPluginManager().registerEvents((Listener)new TeleportBowListener(), (Plugin)this);
+    getCommand("bow").setExecutor((CommandExecutor)new GiveBowCommand(this));
+    getServer().getPluginManager().registerEvents((Listener)new TeleportBowListener(this), (Plugin)this);
     getServer().getPluginManager().registerEvents(new HungerListener(), this);
     Bukkit.getPluginManager().registerEvents((Listener) new SpawnDelayService(), (Plugin) this);
     Bukkit.getPluginManager().registerEvents((Listener) new WorldSpawnService(), (Plugin) this);
