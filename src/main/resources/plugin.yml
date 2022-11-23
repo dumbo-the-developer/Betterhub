@@ -41,6 +41,7 @@ commands:
     gms: gamemode s
     gma: gamemode a
     gmsp: gamemode sp
+  fw:
 permissions:
   chatfilter.*:
     description: Gives access to all MobHealth commands/functions.

@@ -118,7 +118,7 @@ public class PlayerChatListener implements Listener {
         boolean hasChatCommand = false;
         for (String command : Main.commands) {
 //			System.out.print("Checkin: "+command);
-            if (message_lower.toLowerCase().startsWith(command + " ",1)) {
+            if (message_lower.toLowerCase().startsWith(command + " ", 1)) {
                 hasChatCommand = true;
             }
         }

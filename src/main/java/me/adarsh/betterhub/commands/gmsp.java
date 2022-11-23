@@ -8,12 +8,12 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public class gmsp implements CommandExecutor {
-  public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-    if (sender instanceof Player) {
-      Player player = (Player)sender;
-      player.setGameMode(GameMode.SPECTATOR);
-      player.sendMessage(ChatColor.BLUE + "Set your gamemode to spectator.");
-    } 
-    return true;
-  }
+    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+        if (sender instanceof Player) {
+            Player player = (Player) sender;
+            player.setGameMode(GameMode.SPECTATOR);
+            player.sendMessage(ChatColor.BLUE + "Set your gamemode to spectator.");
+        }
+        return true;
+    }
 }

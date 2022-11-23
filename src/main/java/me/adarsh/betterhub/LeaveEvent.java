@@ -6,11 +6,11 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerQuitEvent;
 
 public class LeaveEvent implements Listener {
-  @EventHandler
-  public void onLeave(PlayerQuitEvent e) {
-    Player player = e.getPlayer();
-    e.setQuitMessage("[§c-§f] §7" + player.getDisplayName());
-  }
+    @EventHandler
+    public void onLeave(PlayerQuitEvent e) {
+        Player player = e.getPlayer();
+        e.setQuitMessage("[§c-§f] §7" + player.getDisplayName());
+    }
 }
 
 

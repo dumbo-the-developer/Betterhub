@@ -22,7 +22,7 @@
 errorMSG: "are not allowed to use that command"
 join-message: Loaded plugin
 
-bow-on-join: true
+bow-on-join: false
 bow-name: '&f[&eTeleport&aBow&f]'
 bow-description: '&6Shoot your shot and teleport anywhere.'
 teleported-message: '&aYou have been Teleported'
@@ -107,3 +107,9 @@ kick: false
 showInConsole: true
 censor: false
 aggressiveMatching: false
+
+firework-launched-message: "Launched Fireworks!"
+
+#  Message when there is still delay
+#  Dont use color codes here
+firework-permission-message: "(!) No Permission."

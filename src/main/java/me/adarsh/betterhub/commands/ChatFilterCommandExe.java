@@ -11,16 +11,16 @@ public class ChatFilterCommandExe implements CommandExecutor {
     public Main plugin;
 
     public ChatFilterCommandExe(Main instance) {
-        this.plugin=instance;
+        this.plugin = instance;
     }
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if(command.getName().equalsIgnoreCase("ChatFilter")){
+        if (command.getName().equalsIgnoreCase("ChatFilter")) {
             if (args.length > 0 && args[0].toLowerCase().equals("reload")) {
                 Boolean doReload = false;
                 if (sender instanceof Player) {
-                    if( sender.hasPermission("chatfilter.reload") ) {
+                    if (sender.hasPermission("chatfilter.reload")) {
                         doReload = true;
                     } else {
                         sender.sendMessage(ChatColor.RED + "You do not have permission to reload.");
@@ -31,7 +31,9 @@ public class ChatFilterCommandExe implements CommandExecutor {
                 }
                 if (doReload) {
                     plugin.loadConfiguration(false);
-                    if (sender instanceof Player) { sender.sendMessage(ChatColor.GREEN + "[ChatFilter] Reloaded."); }
+                    if (sender instanceof Player) {
+                        sender.sendMessage(ChatColor.GREEN + "[ChatFilter] Reloaded.");
+                    }
                     System.out.print(ChatColor.GREEN + "[ChatFilter] Reloaded.");
                     return true;
                 }
