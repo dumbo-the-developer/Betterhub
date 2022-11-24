@@ -12,6 +12,7 @@ import java.util.stream.Collectors;
 
 import me.adarsh.betterhub.commands.*;
 import me.adarsh.betterhub.config.WSConfig;
+import me.adarsh.betterhub.listeners.Fly;
 import me.adarsh.betterhub.listeners.HungerListener;
 import me.adarsh.betterhub.listeners.PlayerChatListener;
 import me.adarsh.betterhub.listeners.TeleportBowListener;
@@ -105,6 +106,7 @@ public class Main extends JavaPlugin implements Listener {
 
         PluginManager pm = getServer().getPluginManager();
         pm.registerEvents(this.playerListener, this);
+        getServer().getPluginManager().registerEvents(new Fly(), this);
     }
 
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
