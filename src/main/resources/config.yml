@@ -1,0 +1,115 @@
+############################################################################################################
+#                                       BETTERHUB CONFIGURATION                                            #
+#                                                                                                          #
+#                        BY CAREFUL WHILE EDITING ANY OF SETTING OF THIS SECTION                           #
+#                                                                                                          #
+############################################################################################################
+
+# Better Hub config
+# Placeholders: of chat formatter
+# {message} - the chat message
+# {name} - the player's name
+# {displayname} - the player's display name / nickname
+# {world} - the world name of the player's current world
+# {prefix} - the player's highest priority prefix
+# {suffix} - the player's highest priority suffix
+# {prefixes} - the player's prefixes sorted by the highest priority
+# {suffixes} - the player's suffixes sorted by the highest priority
+# {username-color} - the player's or the group's username color
+# {message-color} - the player's or the group's message color
+
+# This message will be displayed to the player when someone tries to access a disabled command
+errorMSG: "are not allowed to use that command"
+join-message: Loaded plugin
+
+bow-on-join: false
+bow-name: '&f[&eTeleport&aBow&f]'
+bow-description: '&6Shoot your shot and teleport anywhere.'
+teleported-message: '&aYou have been Teleported'
+
+# Put the commands in which you'd like to disable here. DO NOT PUT THE "/"
+disabledCommands:
+  - plugins
+  - pl
+
+#World Spawn Configs
+
+#What language you want the messages?
+language: EN
+
+#Enable or disable the hub command
+hub-enabled: true
+
+#Spawns the player to hub location when joining
+hub-on-join: true
+
+#Spawns the player to world spawn when joining (Is priority over hub)
+#If a world does not have a spawn, the player will spawn at hub
+spawn-on-join: false
+
+#Spawns the player to world spawn when respawning (Is priority over hub)
+#If a world does not have a spawn, the player will spawn at hub
+spawn-on-respawn: true
+
+#How long (in seconds) does it take to spawn the player after running
+#the command? (0 = disable)
+spawn-delay: 0
+
+#How long (in seconds) does it take to teleport the player to the hub after running
+#the command? (0 = disable)
+hub-delay: 0
+
+#WARNING: If you do not have a world called "world", you may experience some console errors.
+#         If you are experiencing console errors, shut down the server and rename the "world"
+#         setting of hub and spawns sections to your main world name!
+
+#Hub location
+hub:
+  world: world
+  x: 0
+  y: 80.0
+  z: 0
+  yaw: 90.0
+  pitch: 0.0
+
+spawns:
+  world:
+    world: world
+    x: 0
+    y: 80.0
+    z: 0
+    yaw: 0
+    pitch: 0
+############################################################################################################
+#                                  CHAT FORMATTER CONFIGURATION                                            #
+#                                                                                                          #
+#                    BY CAREFUL WHILE EDITING ANY OF SETTING OF THIS SECTION                               #
+#                                                                                                          #
+############################################################################################################
+
+
+# Betterhub Chat Configuration
+#
+
+#
+# To reload the configuration, run '/bhcf reload' command. Make sure you have the 'betterhub.cf.reload' permission assigned.
+chat-format: "{prefix}{name}&r: {message}"
+
+# Set the format per group.
+# Note: Option for more advanced users. Remove comments to run.
+group-formats:
+#  default: "[default] {name}&r: {message}"
+#  admin: "[admin] {name}&r: {message}"
+
+
+debugMode: false
+kick: false
+showInConsole: true
+censor: false
+aggressiveMatching: false
+
+firework-launched-message: "Launched Fireworks!"
+
+#  Message when there is still delay
+#  Dont use color codes here
+firework-permission-message: "(!) No Permission."

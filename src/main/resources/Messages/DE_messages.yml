@@ -1,0 +1,82 @@
+﻿#World Spawn Meldungen. Tradotto da FoviOX (Google Translate)
+
+#Präfix für Feedback-Befehle
+betterhub-main-prefix: '&a[&bBetterHub&a] '
+
+#Präfix für Admin-Befehle
+betterhub-admin-prefix: '&a[&bBetterHub Admin&a] '
+
+#Präfix für Fehlermeldungen
+betterhub-error-prefix: '&4[&cBetterHub&4] '
+
+#Wird angezeigt, wenn der Spieler keine Berechtigung hat, wenn ein betterhub-Befehl verwendet wird.
+command-no-permission: '&cSie haben keine Berechtigung, diesen Befehl zu verwenden.'
+
+#Normalerweise in der Konsole angezeigt, wenn die Konsole versucht, Spawn oder etwas zu verwenden.
+not-a-player-error: '&cSie müssen ein Spieler sein, um diesen Befehl zu verwenden.'
+
+#Gezeigt, wenn man versucht, auf eine nicht existierende Welt zuzugreifen.
+specified-world-not-exist: '&cDie angegebene Welt existiert nicht.'
+
+#Gezeigt, wenn die Welt keinen Spawn hat
+no-spawn-world: '&cEs gibt keinen Laich in dieser Welt.'
+
+#Bei der Verwendung von /betterhub, die gerade eine config neu lädt.
+config-reload: '&aConfig neu geladen!'
+
+#Wird beim Laichen mit /hub gezeigt
+hub-spawning: '&aSpawning to Hub...'
+
+#Wird angezeigt, wenn der Befehl /linkspawn fehlschlägt
+#%w = angegebenen Weltnamen
+spawn-link-fail: '&e%w &cexistiert nicht oder hat keinen Spawnpunkt.'
+
+#Gezeigt, wenn man eine Welt mit einem Weltpelz verbindet
+#%f = Weltname, wo der Spieler den Befehl ausgeführt hat
+#%t = angegebene Welt
+spawn-link-success: '&e%w &aist jetzt verbunden mit %t'
+
+#Gezeigt beim erfolgreichen Einstellen des Hubs mit /sethub
+hub-set-success: '&aHub gesetzt!'
+
+#Gezeigt, wenn Hub nicht existiert
+hub-not-exists: '&cHub existiert nicht'
+
+#Gezeigt bei erfolgreicher Einstellung der Spawn-Location einer Welt
+#%w = Weltname
+set-spawn-success: '&aSpawn gesetzt für &e%w&a!'
+
+#Wird beim erfolgreichen Löschen eines Spawn von% w world angezeigt
+#%w = Weltname
+spawn-delete-success: '&aSpawn für &e%w &a!'
+
+#1.5 (NOT TRANSLATED!)
+#Shown when failing to delete a spawn from %w world
+#WHERE %w = world name
+spawn-delete-fail: '&aUnable to delete spawn for &e%w &a!'
+
+#Gezeigt bei der Verwendung /spawn mit einer Verzögerung
+#%w = Weltname
+#%t = Verzögerung in Sekunden
+spawning-delay-message: '&aSpawning to &e%w &aim %t sekunden...'
+
+#Shown when using /hub with a delay
+#WHERE %t = delay in seconds
+spawning-hub-delay-message: '&aSpawning to Hub in %t seconds...'
+
+#Gezeigt beim Laichen in eine andere Welt
+#%w = weltname
+spawning-message: '&aSpawning to &e%w&a...'
+
+#Wird angezeigt, wenn das Laichen abgebrochen wird
+spawning-cancelled: '&cSpawning abgebrochen!'
+
+#1.5 (NOT TRANSLATED!)
+#Shown when successfully configuring a spawn from %w world
+#WHERE %w = world name
+spawn-configure-success: '&aSpawn configured for &e%w &a!'
+
+#1.5 (NOT TRANSLATED!)
+#Shown when failing to configure a spawn from %w world
+#WHERE %w = world name
+spawn-configure-fail: '&aUnable to configure spawn for &e%w &a!'

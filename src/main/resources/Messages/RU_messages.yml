@@ -1,0 +1,82 @@
+﻿#Сообщения плагина betterhub. Перевод от FoviOX
+
+#Префикс плагина
+betterhub-main-prefix: '&3[&bBetterHub&3] '
+
+#Префикс админ команд
+betterhub-admin-prefix: '&a[&bBetterHub.Админ&a] '
+
+#Префикс Ошибки
+betterhub-error-prefix: '&4[&bBetterHub.&cОшибка&4] '
+
+#Сообщение когда у игрока нет прав
+command-no-permission: '&cУ вас нет прав.'
+
+#Сообщение когда через консоль выписывают команду которая доступна только в игре
+not-a-player-error: '&cЭта команда доступна только в игре.'
+
+#Сообщение когда указанного мира нет
+specified-world-not-exist: '&cУказанного мира нет существует.'
+
+#Сообщение когда в мире нет спавна
+no-spawn-world: '&cВ этом мире нет спавна.'
+
+#Сообщение когда используют команду /betterhub
+config-reload: '&aКонфиг перезагружен!'
+
+#Сообщение когда используют команду /hub
+hub-spawning: '&aТелепортация на Hub...'
+
+#Сообщение-Ошибка когда используют команду /linkspawn
+#%w = название мира
+spawn-link-fail: '&e%w &cне существует или в этом мире нет спавна.'
+
+#Сообщение когда успешно выполнена команда /linkspawn
+#%f = название мира в котором игрок прописал команду
+#%t = указанный мир
+spawn-link-success: '&aМир &e%w &aсвязан с миром &e%t'
+
+#Сообщение когда Hub установлен
+hub-set-success: '&aHub установлен!'
+
+#Сообщение когда Hub не установлен
+hub-not-exists: '&cHub не установлен'
+
+#Сообщение когда спавн установлен
+#%w = название мира в котором установлен спавн
+set-spawn-success: '&aТочка спавна установлена в мире &e%w&a!'
+
+#Сообщение когда спавн удалён
+#%w = название мира в котором удалён спавн
+spawn-delete-success: '&aТочка спавна удалена в мире &e%w&a!'
+
+#1.5 (NOT TRANSLATED!)
+#Shown when failing to delete a spawn from %w world
+#WHERE %w = world name
+spawn-delete-fail: '&aUnable to delete spawn for &e%w &a!'
+
+#Сообщение задержки телепортирования на спавн
+#%w = название мира
+#%t = задержка в секундах
+spawning-delay-message: '&aНЕ ДВИГАЙТЕСЬ! Телепортация на спавн &e%w &aчерез %t секунд...'
+
+#Shown when using /hub with a delay
+#WHERE %t = delay in seconds
+spawning-hub-delay-message: '&aSpawning to Hub in %t seconds...'
+
+#Сообщение телепортирования на спавн
+#%w = название мира
+spawning-message: '&aТелепортация на спавн мира &e%w&a...'
+
+#Сообщение о отмене телепортирования на спавн
+spawning-cancelled: '&cТелепортация на спавн отменена!'
+
+#1.5 (NOT TRANSLATED!)
+#Shown when successfully configuring a spawn from %w world
+#WHERE %w = world name
+spawn-configure-success: '&aSpawn configured for &e%w &a!'
+
+#1.5 (NOT TRANSLATED!)
+#Shown when failing to configure a spawn from %w world
+#WHERE %w = world name
+spawn-configure-fail: '&aUnable to configure spawn for &e%w &a!'

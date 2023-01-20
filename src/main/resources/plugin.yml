@@ -1,0 +1,60 @@
+name: BetterHub
+version: '3.4'
+main: me.adarsh.betterhub.Main
+authors: [ Adarsh ]
+api-version: 1.13
+commands:
+  gmc:
+    description: Sets gamemode to creative
+    usage: /<command>
+    permission: betterhub.gmc
+  gms:
+    description: Sets gamemode to survival
+    usage: /<command>
+    permission: betterhub.gms
+  gma:
+    description: Sets gamemode to adventure
+    usage: /<command>
+    permission: betterhub.gma
+  gmsp:
+    description: Sets gamemode to spectator
+    usage: /<command>
+    permission: betterhub.gmsp
+  bhcf:
+    description: Reload the configuration.
+    permission: bettherhub.cf.reload
+    Usage: /bhcf reload
+  ChatFilter:
+    description: Root command for all  ChatFilter Commands.
+    usage: /<command> [reload]
+  spawn:
+  bow:
+  setspawn:
+  sethub:
+  hub:
+  linkspawn:
+  delspawn:
+  worldspawn:
+  spawnonrespawn:
+  aliases:
+    gmc: gamemode c
+    gms: gamemode s
+    gma: gamemode a
+    gmsp: gamemode sp
+  fw:
+permissions:
+  chatfilter.*:
+    description: Gives access to all MobHealth commands/functions.
+    children:
+      chatfilter.canswear: true
+      chatfilter.reload: true
+      chatfilter.canchat: true
+  chatfilter.canswear:
+    description: Allows user to swear.
+    default: false
+  chatfilter.canchat:
+    description: Allows User to chat..
+    default: true
+  chatfilter.reload:
+    description: Allows user to reload settings.
+    default: op
