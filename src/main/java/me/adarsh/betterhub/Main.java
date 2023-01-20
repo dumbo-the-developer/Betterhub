@@ -1,6 +1,5 @@
 package me.adarsh.betterhub;
 
-;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
