@@ -13,7 +13,6 @@ import me.adarsh.betterhub.commands.*;
 import me.adarsh.betterhub.config.WSConfig;
 import me.adarsh.betterhub.listeners.Fly;
 import me.adarsh.betterhub.listeners.HungerListener;
-import me.adarsh.betterhub.listeners.PlayerChatListener;
 import me.adarsh.betterhub.listeners.TeleportBowListener;
 import me.adarsh.betterhub.metrics.Metrics;
 import me.adarsh.betterhub.services.SpawnDelayService;
@@ -44,23 +43,9 @@ public class Main extends JavaPlugin implements Listener {
     private static final Pattern HEX_PATTERN = Pattern.compile("&#([A-Fa-f0-9]{6})");
     public static Main plugin;
     public static Logger logger;
-    public static boolean debugMode;
-    public static boolean showInConsole;
-    public static boolean kick;
-    public static boolean censor;
-    public static boolean agressiveMatching;
-    public static List<String> langProfanity;
-    public static List<String> profanityWordMatch;
-    public static String profanityMessage;
-    public static List<String> langTriggers;
-    public static String eleven;
-    public static String censorText;
-    public static String blockMessage;
     private static Main gPlugin;
-    public final PlayerChatListener playerListener = new PlayerChatListener(this);
     private LuckPerms luckPerms;
-    private FileConfiguration LangConfig = null;
-    private File LangConfigurationFile = null;
+
 
     public static Main getPlugin() {
         return gPlugin;
@@ -98,7 +83,6 @@ public class Main extends JavaPlugin implements Listener {
 
         plugin = this;
 
-        pm.registerEvents(this.playerListener, this);
         pm.registerEvents(new Fly(), this);
 
         getConfig().options().copyDefaults();
@@ -207,62 +191,6 @@ public class Main extends JavaPlugin implements Listener {
             plugin.reloadConfig();
         }
 
-        Main.debugMode = plugin.getConfig().getBoolean("debugMode");
-        Main.showInConsole = plugin.getConfig().getBoolean("showInConsole");
-        Main.kick = plugin.getConfig().getBoolean("kick");
-        Main.censor = plugin.getConfig().getBoolean("censor");
-        Main.agressiveMatching = plugin.getConfig().getBoolean("aggressive");
-
-        plugin.saveConfig();
-
-        if (firstrun) {
-            plugin.getLangConfig();
-        } else {
-            plugin.reloadLangConfig();
-        }
-
-        Main.langProfanity = (List<String>) plugin.getLangConfig().getList("profanity");
-        Main.profanityWordMatch = (List<String>) plugin.getLangConfig().getList("profanityWordMatch");
-        Main.profanityMessage = plugin.getLangConfig().getString("profanityMessage");
-        Main.langTriggers = (List<String>) plugin.getLangConfig().getList("triggers");
-        Main.eleven = plugin.getLangConfig().getString("triggerPhrase");
-        Main.censorText = plugin.getLangConfig().getString("censorText");
-        Main.blockMessage = plugin.getLangConfig().getString("blockMessage");
-
-        plugin.saveLangConfig();
-    }
-
-    public void reloadLangConfig() {
-        if (LangConfigurationFile == null) {
-            LangConfigurationFile = new File(getDataFolder(), "lang.yml");
-        }
-        LangConfig = YamlConfiguration.loadConfiguration(LangConfigurationFile);
-        LangConfig.options().copyDefaults(true);
-
-        // Look for defaults in the jar
-        InputStream defConfigStream = getResource("lang.yml");
-        if (defConfigStream != null) {
-            YamlConfiguration defConfig = YamlConfiguration.loadConfiguration(defConfigStream);
-            LangConfig.setDefaults(defConfig);
-        }
-    }
-
-    public FileConfiguration getLangConfig() {
-        if (LangConfig == null) {
-            reloadLangConfig();
-        }
-        return LangConfig;
-    }
-
-    public void saveLangConfig() {
-        if (LangConfig == null || LangConfigurationFile == null) {
-            return;
-        }
-        try {
-            LangConfig.save(LangConfigurationFile);
-        } catch (IOException ex) {
-            logger.severe("Could not save Lang config to " + LangConfigurationFile + " " + ex);
-        }
     }
 
 
